@@ -2,11 +2,15 @@
 
 Simple Web service to Send Notifications to MacOS via (Remote) HTTP call.
 
+
+![Demo](https://raw.githubusercontent.com/ggtd/macos-python-notify-webservice/master/README.images/notifiy_demo_curl_1.jpg "Demo")
+
+
 # Configuration
 - set IP of server ()
 - check port
 
-# Usage
+# Usage Example
 
 curl 'http://127.0.0.1:8090/?t=title&st=subtitle&m=message+abc+xyz'
 
