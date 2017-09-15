@@ -3,7 +3,7 @@
 
 # Simple Web service to Send Notifications to MacOS via (Remote) HTTP call.
 # by: Tomas Dobrotka ( www.dobrotka.sk )
-# v0.1 - 15.09.2017
+# v0.1.1 - 15.09.2017
 
 
 import time
@@ -61,22 +61,22 @@ class MyHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         s.end_headers()
         param = urlparse.parse_qs(urlparse.urlparse(s.path).query)
         try:
-            title=param['t']
+            title=str(param['t'][0])
         except:
             title=''
         try:
-            subtitle=param['st']
+            subtitle=str(param['st'][0])
         except:
             subtitle=''
         try:
-            message=param['m']
+            message=str(param['m'][0])
         except:
             message=''
         try:
             if param['f']<>'':force=1
         except:
             force=0
-        res=macodNotification(TITLE=str(title[0]),SUBTITLE=str(subtitle[0]), MESSAGE=str(message[0]),FORCE=force)
+        res=macodNotification(TITLE=title,SUBTITLE=subtitle, MESSAGE=message,FORCE=force)
         s.wfile.write(res)
 
 if __name__ == '__main__':
