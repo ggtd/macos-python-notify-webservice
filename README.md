@@ -37,6 +37,7 @@ If the '&f=' parameter is used in URL (any non-empty value). All notifications a
 - [ ] run on startup script
 - [ ] install script
 - [ ] Add "say" command call. To say something passed via HTTP
+- [ ] Respond with blank gif/png image
 
 
 ## Security Warning:
