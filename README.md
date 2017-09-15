@@ -7,7 +7,7 @@ Simple Web service to Send Notifications to MacOS via (Remote) HTTP call.
 
 
 # Configuration
-- set IP of server ()
+- set IP of server
 - check port
 
 # Usage Example
